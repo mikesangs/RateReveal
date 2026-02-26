@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #05070C;
+    --foreground: rgba(255, 255, 255, 0.92);
+    --surface: #07101C;
+    --surface-2: #0A1526;
+    --border: rgba(255, 255, 255, 0.08);
+    --primary: #1E7BFF;
+    --primary-hover: #2D8BFF;
+    --primary-foreground: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.68);
+    --muted: rgba(255, 255, 255, 0.45);
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
