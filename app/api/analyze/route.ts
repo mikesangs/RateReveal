@@ -122,14 +122,14 @@ export async function POST(req: Request) {
     // Build the user message content
     const userContent: Array<
       | { type: "text"; text: string }
-      | { type: "file"; data: string; mimeType: string }
+      | { type: "file"; data: string; mediaType: string }
     > = []
 
     if (isImage) {
       userContent.push({
         type: "file",
         data: base64,
-        mimeType,
+        mediaType: mimeType,
       })
       userContent.push({
         type: "text",
@@ -139,7 +139,7 @@ export async function POST(req: Request) {
       userContent.push({
         type: "file",
         data: base64,
-        mimeType,
+        mediaType: mimeType,
       })
       userContent.push({
         type: "text",
